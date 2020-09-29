@@ -80,10 +80,14 @@ lcr_NY_rand <- sample(nrow(lcr_seg_NY))
 # randomize ArcGIS output file
 lcr_seg_NY <- lcr_seg_NY[lcr_NY_rand, 1:5]
 # allow for 5 possible transects in each 22 meter reef segment
-rand_trans_num <- data.frame(TRANS_NUM = sample(1:5, nrow(lcr_seg_NY), replace = TRUE))
+rand_trans_num <- data.frame(TRANS_NUM = sample(1:5, nrow(lcr_seg_NY), 
+                                                replace = TRUE))
 # combine 
 rand_trans_num$SEG <- lcr_seg_NY$SEG
-lcr_trans_NY <- merge(lcr_seg_NY, rand_trans_num, by.x = "SEG", sort = FALSE)
+lcr_trans_NY <- merge(lcr_seg_NY, 
+                      rand_trans_num, 
+                      by.x = "SEG", 
+                      sort = FALSE)
 # calculate tran tl per segment based on number of trans assigned to each segment
 lcr_trans_NY$TOT_LENGTH <- lcr_trans_NY$LENGTH * lcr_trans_NY$TRANS_NUM
 # look at the data
@@ -98,10 +102,14 @@ lcr_YY_rand <- sample(nrow(lcr_seg_YY))
 # randomize ArcGIS output file
 lcr_seg_YY <- lcr_seg_YY[lcr_YY_rand, 1:5]
 # allow for 5 possible transects in each 22 meter reef segment
-rand_trans_num <- data.frame(TRANS_NUM = sample(1:5, nrow(lcr_seg_YY), replace = TRUE))
+rand_trans_num <- data.frame(TRANS_NUM = sample(1:5, nrow(lcr_seg_YY),
+                                                replace = TRUE))
 # combine 
 rand_trans_num$SEG <- lcr_seg_YY$SEG
-lcr_trans_YY <- merge(lcr_seg_YY, rand_trans_num, by.x = "SEG", sort = FALSE)
+lcr_trans_YY <- merge(lcr_seg_YY,
+                      rand_trans_num, 
+                      by.x = "SEG", 
+                      sort = FALSE)
 # calculate tran tl per segment based on number of trans assigned to each segment
 lcr_trans_YY$TOT_LENGTH <- lcr_trans_YY$LENGTH * lcr_trans_YY$TRANS_NUM
 # look at the data

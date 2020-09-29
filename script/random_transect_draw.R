@@ -4,7 +4,8 @@
 ##### WILD REEF RANDOM DRAWS #####
 # "harvest_trans.csv" and "nonharvest_trans.csv" include all 
 # possible wild reef transects (2x2 meter grid) from ArcGIS
-# shapefile ("wildreef_fishnet_clip_sep.shp")
+# shapefile ("wildreef_fishnet_clip_sep.shp");
+# this is in the shapefiles folder in the repo
 
 ### no harvest area ###
 # read in all possible no harvest trans

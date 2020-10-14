@@ -10,13 +10,13 @@
 ### no harvest area ###
 # read in all possible no harvest trans
 NN_harv_trans <- read.csv("data/nonharvest_trans.csv")   
-# min trans length 10m per 18Nov2018 email
+# min trans length 10m per 18Nov2018 email from Peter Frederick
 NN_harv_trans <- NN_harv_trans[which(NN_harv_trans$LENGTH >= 10), ]  
 # randomize ArcGIS output file
 NN_harv_rand <- sample(nrow(NN_harv_trans))
-NN_harv_trans <- NN_harv_trans[NN_harv_rand, 1:10]
+NN_harv_trans <- NN_harv_trans[NN_harv_rand, ]
 # export randomized file for each draw
-write.csv(NN_harv_trans, file = "data/wild_reef_trans_NN_2019.csv")
+write.csv(NN_harv_trans, file = "data/wild_reef_trans_NN_2020.csv")
 
 ### harvest area ###
 # read in all possible harvest trans
@@ -25,9 +25,9 @@ YN_harv_trans <- read.csv("data/harvest_trans.csv")
 YN_harv_trans <- YN_harv_trans[which(YN_harv_trans$LENGTH >= 10), ]  
 # randomize ArcGIS output file
 YN_harv_rand <- sample(nrow(YN_harv_trans))
-YN_harv_trans <- YN_harv_trans[YN_harv_rand, 1:10]
+YN_harv_trans <- YN_harv_trans[YN_harv_rand, ]
 # export randomized file for each draw
-write.csv(YN_harv_trans, file = "data/wild_reef_trans_YN_2019.csv")
+write.csv(YN_harv_trans, file = "data/wild_reef_trans_YN_2020.csv")
 
 ########## IMPORTANT ##########
 #' in exported files, each row is a transect; start at the top and sum
@@ -36,7 +36,10 @@ write.csv(YN_harv_trans, file = "data/wild_reef_trans_YN_2019.csv")
 #' format with the following columns: 
 #' station, transect, epoch, rock, harvest, length, start_x, start_y, end_x, end_y
 #' add Epoch 1/Spring 2018 transects:
-#' LCI1-1, LCI2, LCI3, LCI4, LCI5, LCI6, LCN1, LCN2, LCN3, LCN4, LCN5, LCN6, LCN9
+#' LCI1-1 (NN), LCI2 (YN), LCI3 (YN), 
+#' LCI4 (YN), LCI5 (YN), LCI6 (YN), LCN1 (YN), 
+#' LCN2 (YN), LCN3 (YN), LCN4 (YN), LCN5 (YN), 
+#' LCN6 (YN), LCN9 (YN)
 #' save "transect_draw_final_YYYY.csv" file in the data folder;
 #' import into Arc and fill in missing values, ensuring unique bar/transect
 #' numbers from previous year draws
@@ -60,6 +63,9 @@ YY_prop <- 0.44   # this wont change
 # NY_trans_tl <- lcr_trans_tl * NY_prop
 # YY_trans_tl <- lcr_trans_tl * YY_prop
 
+# transect total length to be sampled via power analysis
+YY_trans_tl <- 1150
+NY_trans_tl <- 884
 # number of transects to be sampled (all 22 meter transects)
 ind_trans_tl <- 22
 NY_trans <- NY_trans_tl / ind_trans_tl
@@ -74,12 +80,15 @@ lcr_seg_NY <- lcr_seg[which(lcr_seg$ELEMENT == "str1" |
 # yes harvest, yes rock
 lcr_seg_YY <- lcr_seg[which(lcr_seg$ELEMENT == "str3"), ]
 
+# calculate total possible transect length for NY and YY
+tot_possible_trans_NY <- sum(lcr_seg_NY$LENGTH) * 5
+tot_possible_trans_YY <- sum(lcr_seg_YY$LENGTH) * 5
 
 
-### random draw no harvest, yes rocks ###
+### random draw no harvest, yes rocks; NY ###
 lcr_NY_rand <- sample(nrow(lcr_seg_NY))
 # randomize ArcGIS output file
-lcr_seg_NY <- lcr_seg_NY[lcr_NY_rand, 1:5]
+lcr_seg_NY <- lcr_seg_NY[lcr_NY_rand, ]
 # allow for 5 possible transects in each 22 meter reef segment
 rand_trans_num <- data.frame(TRANS_NUM = sample(1:5, nrow(lcr_seg_NY), 
                                                 replace = TRUE))
@@ -94,7 +103,7 @@ lcr_trans_NY$TOT_LENGTH <- lcr_trans_NY$LENGTH * lcr_trans_NY$TRANS_NUM
 # look at the data
 head(lcr_trans_NY)
 # save this as a new .csv with the updated YYYY
-write.csv(lcr_trans_NY, file = "data/lcr_trans_NY_2019.csv")
+write.csv(lcr_trans_NY, file = "data/lcr_trans_NY_2020.csv")
 
 
 
@@ -116,7 +125,7 @@ lcr_trans_YY$TOT_LENGTH <- lcr_trans_YY$LENGTH * lcr_trans_YY$TRANS_NUM
 # look at the data
 head(lcr_trans_YY)
 # save this as a new .csv with the updated YYYY
-write.csv(lcr_trans_YY, file = "data/lcr_trans_YY_2019.csv")
+write.csv(lcr_trans_YY, file = "data/lcr_trans_YY_2020.csv")
 
 ########## IMPORTANT ##########
 #' in exported files ("lcr_trans_NY_YYYY.csv" and "lcr_trans_YY_YYYY.csv"), 

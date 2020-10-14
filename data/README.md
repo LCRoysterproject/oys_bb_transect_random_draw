@@ -10,4 +10,14 @@ The `data` folder contains:
   
 - `rand_seg.csv` = a list of possible transect segments for oyster heights
   
+- `lcr_trans_NY_2020.csv` = no harvest yes rock .csv file for 2020 random transect draws
+    
+- `lcr_trans_YY_2020.csv` = yes harvest yes rock .csv file for 2020 random transect draws
+  
+- `wild_reef_trans_NN_2020.csv` = no harvest no rock .csv file for 2020 random transect draws
+  
+- `wild_reef_trans_YN_2020.csv` = yes harvest no rock .csv file for 2020 random transect draws
+  
+- `transect_draw_final_2020.csv` = all transect draws for 2020 (period 22) 
+  
 The `archive` folder contains old (previous years) data and random draws.

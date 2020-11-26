@@ -20,5 +20,5 @@ here_we_go <- trans_double[1:round(trans_dblcount_total), ]
 here_we_go
 
 # save this file; "trans_dblcount_YYYY.csv"
-write.csv(here_we_go, file="data/trans_dblcount_2020.csv")
+write.csv(here_we_go, file = "data/trans_dblcount_2020.csv")
 

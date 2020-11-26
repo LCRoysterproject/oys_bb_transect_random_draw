@@ -15,7 +15,10 @@ trans_dblcount_total <- nrow(trans_double) * 0.20
 # 2019 -- 18.2, so 18 double counted transects
 # 2020 -- 37.4, so 37 double counted transects
 
-trans_double[1:34, ]
+# select trans_dblcount_total rows for double counting
+here_we_go <- trans_double[1:round(trans_dblcount_total), ]
+here_we_go
+
 # save this file; "trans_dblcount_YYYY.csv"
-write.csv(trans_double, file="data/trans_dblcount_2020.csv")
+write.csv(here_we_go, file="data/trans_dblcount_2020.csv")
 

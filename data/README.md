@@ -22,6 +22,6 @@ The `data` folder contains:
   
 - `wild_reef_trans_YN_2020.csv` = yes harvest no rock .csv file for 2020 random transect draws
   
-- `transect_draw_final_2020.csv` = all transect draws for 2020 (period 22) 
+- `transect_draw_final_20210125.csv` = all transect draws for 2020 (period 22) post 20210121 power analysis. Pre-season 2020 transect draw is in 'archive' folder
   
 The `archive` folder contains old (previous years) data and random draws.

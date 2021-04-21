@@ -16,7 +16,7 @@ NN_harv_trans <- NN_harv_trans[which(NN_harv_trans$LENGTH >= 10), ]
 NN_harv_rand <- sample(nrow(NN_harv_trans))
 NN_harv_trans <- NN_harv_trans[NN_harv_rand, ]
 # export randomized file for each draw in the data folder as wild_reef_trans_NN_YYYY.csv
-write.csv(NN_harv_trans, file = "data/wild_reef_trans_NN_2020.csv")
+write.csv(NN_harv_trans, file = "data/wild_reef_trans_NN_2021.csv")
 
 ### harvest area ###
 # read in all possible harvest trans
@@ -27,7 +27,7 @@ YN_harv_trans <- YN_harv_trans[which(YN_harv_trans$LENGTH >= 10), ]
 YN_harv_rand <- sample(nrow(YN_harv_trans))
 YN_harv_trans <- YN_harv_trans[YN_harv_rand, ]
 # export randomized file for each draw in the data folder as wild_reef_trans_YN_YYYY.csv
-write.csv(YN_harv_trans, file = "data/wild_reef_trans_YN_2020.csv")
+write.csv(YN_harv_trans, file = "data/wild_reef_trans_YN_2021.csv")
 
 ########## IMPORTANT ##########
 #' in exported files, each row is a transect; start at the top and sum
@@ -66,7 +66,7 @@ YY_prop <- 0.44   # this wont change
 # transect total length to be sampled via power analysis
 # (need to be updated based on most recent power analysis)
 YY_trans_tl <- 1150
-NY_trans_tl <- 884
+NY_trans_tl <- 1185
 # number of transects to be sampled (all 22 meter transects)
 ind_trans_tl <- 22
 NY_trans <- NY_trans_tl / ind_trans_tl
@@ -104,7 +104,7 @@ lcr_trans_NY$TOT_LENGTH <- lcr_trans_NY$LENGTH * lcr_trans_NY$TRANS_NUM
 # look at the data
 head(lcr_trans_NY)
 # save this as a new .csv with the updated YYYY
-write.csv(lcr_trans_NY, file = "data/lcr_trans_NY_2020.csv")
+write.csv(lcr_trans_NY, file = "data/lcr_trans_NY_2021.csv")
 
 
 
@@ -126,7 +126,7 @@ lcr_trans_YY$TOT_LENGTH <- lcr_trans_YY$LENGTH * lcr_trans_YY$TRANS_NUM
 # look at the data
 head(lcr_trans_YY)
 # save this as a new .csv with the updated YYYY
-write.csv(lcr_trans_YY, file = "data/lcr_trans_YY_2020.csv")
+write.csv(lcr_trans_YY, file = "data/lcr_trans_YY_2021.csv")
 
 ########## IMPORTANT ##########
 #' in exported files ("lcr_trans_NY_YYYY.csv" and "lcr_trans_YY_YYYY.csv"), 

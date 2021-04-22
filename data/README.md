@@ -14,14 +14,15 @@ The `data` folder contains:
   
 *These will change per sampling period:*
   
-- `lcr_trans_NY_2020.csv` = no harvest yes rock .csv file for 2020 random transect draws
+- `lcr_trans_NY_2021.csv` = no harvest yes rock .csv file for 2021 random transect draws
     
-- `lcr_trans_YY_2020.csv` = yes harvest yes rock .csv file for 2020 random transect draws
+- `lcr_trans_YY_2021.csv` = yes harvest yes rock .csv file for 2021 random transect draws
   
-- `wild_reef_trans_NN_2020.csv` = no harvest no rock .csv file for 2020 random transect draws
+- `wild_reef_trans_NN_2021.csv` = no harvest no rock .csv file for 2021 random transect draws
   
-- `wild_reef_trans_YN_2020.csv` = yes harvest no rock .csv file for 2020 random transect draws
-  
-- `transect_draw_final_20210125.csv` = all transect draws for 2020 (period 22) post 20210121 power analysis. Pre-season 2020 transect draw is in 'archive' folder
+- `wild_reef_trans_YN_2021.csv` = yes harvest no rock .csv file for 2021 random transect draws
+
+*PEDNING FOLLOWING POWER ANALYSIS*
+After review of the power analysis for period 24 a `transect_draw_final_2021XXXX.csv` will be created. This file will contain all transect draws for 2021 (period 24).
   
 The `archive` folder contains old (previous years) data and random draws.

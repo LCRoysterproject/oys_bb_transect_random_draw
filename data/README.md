@@ -22,7 +22,8 @@ The `data` folder contains:
   
 - `wild_reef_trans_YN_2021.csv` = yes harvest no rock .csv file for 2021 random transect draws
 
-*PEDNING FOLLOWING POWER ANALYSIS*
-After review of the power analysis for period 24 a `transect_draw_final_2021XXXX.csv` will be created. This file will contain all transect draws for 2021 (period 24).
+- `transect_draw_final_20210807.csv` = all transect draws for 2021 (period 24)
+
+- `trans_dblcount_2021.csv` = transect draws selected for double count for 2021 (period 24)
   
 The `archive` folder contains old (previous years) data and random draws.

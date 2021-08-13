@@ -2,7 +2,7 @@
 ##### UPDATE DATES AND FILE NAMES WHEN RUNNING THROUGH ###########
 
 # import final transect draw data; "transect_draw_final_YYYY.csv" file
-final_trans_draw <- read.csv("data/transect_draw_final_20210807.csv")
+final_trans_draw <- read.csv("data/transect_draw_final_20210812.csv")
 trans_start <- final_trans_draw[which(final_trans_draw$TYPE == "TRAN_ST"), ]
 
 # randomize all of the transects

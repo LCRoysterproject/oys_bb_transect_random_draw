@@ -22,7 +22,7 @@ The `data` folder contains:
   
 - `wild_reef_trans_YN_2021.csv` = yes harvest no rock .csv file for 2021 random transect draws
 
-- `transect_draw_final_20210807.csv` = all transect draws for 2021 (period 24)
+- `transect_draw_final_20220112.csv` = all transect draws for 2021 (period 24)
 
 - `trans_dblcount_2021.csv` = transect draws selected for double count for 2021 (period 24)
   
